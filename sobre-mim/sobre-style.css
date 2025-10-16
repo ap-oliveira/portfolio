@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --texto-padrao: "Poppins", "Inter",sans-serif;
+    --texto-destaque: "WindSong", "Mrs Saint Delafield", cursive;
+}
+
+body {
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    /*font-weight: 400;*/
+    background-color: #0A0406;
+}
+
+
+header {
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    padding-top: 3vh;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FA278C;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    border-radius: 25px;
+    padding-top: 3vh;
+    overflow: hidden;
+    
+}
+
+.hero-ilustracao-container {
+    display: flex;
+    width: 75%;
+    height: 85vh;
+    background-image: url(bg-hero-autora.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 1px 1px #FA278C;
+}
+
+.hero-infos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profissao-digitada {
+    font-family: var(--texto-destaque);
+    font-size: 2rem;
+    background: linear-gradient(to right, #ee4fce, #FA278C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.button-contato-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+}
+
+.contato {
+    font-family: "Poppins", sans-serif;  /*elementos de forms não herdam coisas do body*/
+    font-weight: 600;
+    font-size: clamp(0.4rem, 0.6rem, 3rem);
+    background-color:#FA278C;
+    border: none;
+    padding: 0.8rem;
+    padding-left: 1.7vw;
+    padding-right: 1.7vw;
+    cursor: pointer;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    min-width: 13vw;
+    max-width: 13vw;
+}
+
+.descricao-sobre {
+    padding-top: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.icones {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+.icone {
+    width: 1.5rem;
+    align-self: center;
+    filter: invert(100%);
+}
+
+.sobre-container {
+    color: white;
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+.sobre-mim-textos {
+    background-color: #FA278C;
+    justify-content: center;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 .sobre-mim-titulo {
+    font-size: clamp(1vw, 1.3rem, 5rem);
+}
+
+p .sobre-mim-desc {
+    font-size: clamp(0.5vw, 0.8rem, 3rem);
+}
+
+
+.educacao {
+    background-color: #FA278C;
+    width: 70%;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 5vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 2vh;
+    }
+}
+
+.educacao-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.2vh;
+    
+    .curso {
+        background-color: #f88dc1;
+        border-radius: 5px;
+        border-left: 8px solid #ee4fce;
+        padding-left: 1rem;
+        transition: border-width 0.4s, border-color 0.4s;
+    }
+
+    .curso:hover {
+        border-left-width: 15px;
+        border-color: #bd3fa4;
+        cursor: pointer;
+    }
+
+    .periodo {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    .instituicao {
+        color: #FA278C;
+    }
+}
+
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FA278C;
+    width: 70%;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 3vh;
+    padding-bottom: 2vh;
+}
+
+.skills-container h2 {
+    padding-top: 2vh;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    height: auto;
+    color: #FA278C;
+    justify-content: space-between;
+    gap: 15vw;
+}
+
+footer p {
+    margin-bottom: 1vh;
+}
+
+.socials-footer-container {
+    display: flex;
+    margin-right: 3vw;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+.link-footer {
+    decoration: none;
+}
+
+.icon-footer {
+    width: 1.5rem;
+}
