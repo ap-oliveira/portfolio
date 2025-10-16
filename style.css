@@ -263,6 +263,6 @@ footer p {
 /*Telas de smartphones*/
 @media (max-width: 380px) {
     .profissao-digitada {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
