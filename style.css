@@ -81,7 +81,7 @@ nav ul li a {
 
 .profissao-digitada {
     font-family: var(--texto-destaque);
-    font-size: 2rem;
+    font-size: 2.3rem;
     background: linear-gradient(to right, #ee4fce, #FA278C);
     background-clip: text;
     -webkit-background-clip: text;
@@ -262,7 +262,7 @@ footer p {
         background-image: url(mobile.jpg);
     }
     .profissao-digitada {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
 
@@ -274,6 +274,6 @@ footer p {
     }
 
     .profissao-digitada {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }
