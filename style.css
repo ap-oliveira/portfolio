@@ -80,6 +80,7 @@ nav ul li a {
     font-family: var(--texto-destaque);
     font-size: 2rem;
     background: linear-gradient(to right, #ee4fce, #FA278C);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -245,7 +246,7 @@ footer p {
 }
 
 .link-footer {
-    decoration: none;
+    text-decoration: none;
 }
 
 .icon-footer {
