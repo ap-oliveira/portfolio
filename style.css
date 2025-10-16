@@ -269,6 +269,7 @@ footer p {
 /*Telas muito pequenas*/
 @media (min-width: 320px) and (max-width: 425px) {
     .hero-ilustracao-container {
+        width: 90%;
         background-image: url(mobile-p.jpg);
     }
 
