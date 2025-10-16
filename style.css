@@ -13,6 +13,9 @@
 :root {
     --texto-padrao: "Poppins", "Inter",sans-serif;
     --texto-destaque: "WindSong", "Mrs Saint Delafield", cursive;
+
+    --cor-destaque: #FA278C;
+    --cor-destaque-inverso: #fa71b3;
 }
 
 body {
@@ -55,7 +58,9 @@ nav ul li a {
 
 .hero-ilustracao-container {
     display: flex;
-    width: 75%;
+    width: 85%;
+    max-width: 1400px;
+    min-width: 1024px;
     height: 85vh;
     background-image: url(bg-hero-autora.jpg);
     background-size: cover;
@@ -253,15 +258,22 @@ footer p {
     width: 1.5rem;
 }
 
-/*Telas pequenas */
-@media (max-width: 780px) {
+/*Telas pequenas*/
+@media (min-width: 426px) and (max-width: 520px) {
+    .hero-ilustracao-container {
+        background-image: url(mobile.jpg);
+    }
     .profissao-digitada {
         font-size: 1.5rem;
     }
 }
 
-/*Telas de smartphones*/
-@media (max-width: 380px) {
+/*Telas muito pequenas*/
+@media (min-width: 320px) and (max-width: 425px) {
+    .hero-ilustracao-container {
+        background-image: url(mobile-p.jpg);
+    }
+
     .profissao-digitada {
         font-size: 1.3rem;
     }
