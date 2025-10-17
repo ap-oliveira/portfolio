@@ -14,15 +14,21 @@
     --texto-padrao: "Poppins", "Inter",sans-serif;
     --texto-destaque: "WindSong", "Mrs Saint Delafield", cursive;
 
+    --cor-especial: #ee4fce;
+    --cor-destaque-inverso: #f59ec8;
     --cor-destaque: #FA278C;
-    --cor-destaque-inverso: #fa71b3;
+    --cor-gradiente: linear-gradient(to down, #2D0B19, #871B41);
+    --cor-fundo2: #0A0404;
+    --cor-fundo3: #18060D;
+    --cor-fundo4: #2D0B19;
+    --cor-fundo5: #871B41;
 }
 
 body {
     height: 100vh;
     font-family: "Poppins", sans-serif;
     /*font-weight: 400;*/
-    background-color: #0A0406;
+    background-color: var(--cor-fundo2);
 }
 
 
@@ -137,13 +143,13 @@ nav ul li a {
 }
 
 .sobre-container {
-    color: white;
+    color: var(--cor-destaque);
     display: flex;
     margin-bottom: 5vh;
 }
 
 .sobre-mim-textos {
-    background-color: #FA278C;
+    background-color: var(--cor-fundo3);
     justify-content: center;
     max-width: 70%;
     margin-left: auto;
@@ -164,7 +170,7 @@ p .sobre-mim-desc {
 
 
 .educacao {
-    background-color: #FA278C;
+    background-color: var(--cor-fundo3);
     width: 70%;
     margin: auto;
     border-radius: 5px;
@@ -177,6 +183,7 @@ p .sobre-mim-desc {
     h2 {
         text-align: center;
         padding-bottom: 2vh;
+        color: var(--cor-destaque);
     }
 }
 
@@ -186,7 +193,7 @@ p .sobre-mim-desc {
     gap: 1.2vh;
     
     .curso {
-        background-color: #f88dc1;
+        background-color: var(--cor-fundo4);
         border-radius: 5px;
         border-left: 8px solid #ee4fce;
         padding-left: 1rem;
@@ -202,29 +209,68 @@ p .sobre-mim-desc {
     .periodo {
         font-weight: bold;
         font-size: 0.8rem;
+        color: var(--cor-destaque);
     }
 
     .instituicao {
         color: #FA278C;
     }
+
+    .titulacao {
+        color: var(--cor-destaque-inverso);
+    }
 }
 
 
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #FA278C;
+.skills {
+    background-color: var(--cor-fundo3);
     width: 70%;
     border-radius: 5px;
     text-align: center;
     margin: auto;
     margin-top: 3vh;
-    padding-bottom: 2vh;
+    
+    h2 {
+        padding-top: 2vh;
+        color: var(--cor-destaque);
+    }
+
+    .skill-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 10px;
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nome {
+                font-weight: bold;
+                color: var(--cor-destaque-inverso);
+            }
+            .porcent {
+                font-weight: bold;
+                color: var(--cor-destaque);
+            }
+        }
+
+        .barra {
+            width: 100%;
+            height: 8px;
+            background-color: var(--cor-destaque-inverso);
+            border-radius: 5px;
+
+            .progresso {
+                height: 100%;
+                background-color: var(--cor-destaque);
+                border-radius: 5px;
+            }
+        }
+    }
 }
 
-.skills-container h2 {
-    padding-top: 2vh;
-}
 
 footer {
     display: flex;
