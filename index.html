@@ -8,6 +8,8 @@
     <meta name="description"
         content="Um pouco sobre mim, designer, estudante de análise de dados e interessada em programação no geral.">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
@@ -29,13 +31,13 @@
                     <h2 class="profissao-digitada">Analista de Dados</h2>
                     <div class="icones">
                         <a href="https://github.com/ap-oliveira" target="_blank" rel="external">
-                            <img src="github-icon.png" alt="Ícone GitHub" class="icone">
+                            <i class="fa-brands fa-github fa-2x"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/ana-paula-antonio-de-oliveira-5a16b9155/" target="_blank" rel="external">
-                            <img src="linkedin-icon.png" alt="Ícone GitHub" class="icone">
+                            <i class="fa-brands fa-linkedin fa-2x"></i>
                         </a>
                         <a href="https://www.behance.net/anap-oliveira#" target="_blank" rel="external">
-                            <img src="behance-icon.png" alt="Ícone Behance" class="icone">
+                            <i class="fa-brands fa-square-behance fa-2x"></i>
                         </a>
                     </div>
                 </div>
@@ -49,9 +51,9 @@
 
         <!--Sessão com Botões de Contato-->
         <section class="button-contato-container">
-            <button onclick="" class="contato" id="button-email">Email me</button>
-            <button class="contato" id="button-whatsapp">WhatsApp</button>
-            <button class="contato" id="button-cv">CV</button>
+            <a href="mailto: ap.antonioliveira@gmail.com" id="button-email" class="contato"><i class="fa-solid fa-envelope"></i></a>
+            <!--<a href="" id="button-whatsapp" class="contato"><i class="fa-brands fa-whatsapp"></i></a>-->
+            <a href="" id="button-cv" class="contato"><i class="fa-solid fa-file"></i></a>
         </section>
 
         <!--Sessão sobre mim-->
@@ -71,9 +73,9 @@
             </div>
         </article>
 
-        <!--Sessão de Educação e Skills-->
+        <!--Sessão de Educação-->
         <article class="educacao">
-            <h2><i class="fa-solid fa-graduation-cap"></i>Educação</h2>
+            <h2><i class="fa-solid fa-graduation-cap"></i> Educação</h2>
             
             <div class="educacao-container">
                 <div class="curso">
@@ -147,9 +149,19 @@
 
         <!--Sessão de Projetos-->
         <section class="projetos-container">
-            <div class="projeto1"></div>
-            <div class="projeto2"></div>
-            <div class="projeto3"></div>
+            <div class="projeto">
+                <img src="bg-hero-mobile.jpg" alt="Imagem ilustrativa" class="foto">
+                <div class="projeto-info">
+                    <p class="periodo">2025</p>
+                    <h3 class="titulo">Análise de Cartela de Clientes que Realizaram Operações em Bolsa</h3>
+                    <p>Projeto construído para analisar a cartela de clientes que realizaram operações na Bolsa de Valores.</p>
+                    <details class="descricao">
+                        <summary>Saiba Mais</summary>
+                        <p>Lorem ipsum dolor et dolor ipsum</p>
+                    </details>
+                </div>
+            </div>
+
         </section>
 
     </main>
@@ -157,10 +169,10 @@
         <p>&copy; 2025 Desenvolvido por Ana Paula.</p>
         <div class="socials-footer-container">
             <a href="https://github.com/ap-oliveira" class="link-footer">
-                <img src="github-pink-icon.png" alt="GitHub" class="icon-footer">
+                <i class="fa-brands fa-github"></i>
             </a>
             <a href="https://www.linkedin.com/in/ana-paula-antonio-de-oliveira-5a16b9155/" class="link-footer">
-                <img src="linkedin-pink-icon.png" alt="LinkedIn" class="icon-footer">
+                <i class="fa-brands fa-linkedin"></i>
             </a>
         </div>
 

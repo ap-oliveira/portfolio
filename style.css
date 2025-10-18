@@ -33,7 +33,9 @@ body {
 
 
 header {
-    height: auto;
+    padding: 0.5rem 15%;
+    background: #0a040480;
+    backdrop-filter: blur(10px);
 }
 
 nav ul {
@@ -41,14 +43,24 @@ nav ul {
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
+    align-items: center;
     list-style: none;
-    padding-top: 3vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #FA278C;
+    color: var(--cor-destaque-inverso);
+    font-weight: 700;
+    transition: 0.4s ease-in-out;
+    border-bottom: 3px solid transparent;
 }
+
+nav ul li a:hover {
+        color: var(--cor-destaque);
+        border-bottom: 3px solid var(--cor-destaque);
+    }
 
 .hero-section {
     display: flex;
@@ -64,7 +76,8 @@ nav ul li a {
 
 .hero-ilustracao-container {
     display: flex;
-    width: 85%;
+    width: 100%;
+    max-width: 900px;
     height: 85vh;
     background-image: url(bg-hero-autora.jpg);
     background-size: cover;
@@ -72,7 +85,6 @@ nav ul li a {
     background-position: center center;
     border-radius: 25px;
     overflow: hidden;
-    box-shadow: 1px 1px #FA278C;
 }
 
 .hero-infos-container {
@@ -102,24 +114,30 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     gap: 5vw;
-    margin-top: 4vh;
-    margin-bottom: 3vh;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
 }
 
 .contato {
-    font-family: "Poppins", sans-serif;  /*elementos de forms não herdam coisas do body*/
-    font-weight: 600;
-    font-size: clamp(0.4rem, 0.6rem, 3rem);
-    background-color:#FA278C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-fundo4);
+    text-decoration: none;
+    background-color: var(--cor-destaque);
     border: none;
     padding: 0.8rem;
-    padding-left: 1.7vw;
-    padding-right: 1.7vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
     cursor: pointer;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    min-width: 13vw;
-    max-width: 13vw;
+    min-width: 8vw;
+    max-width: 10vw;
+
+    i {
+        font-size: 1.5rem;
+    }
 }
 
 .descricao-sobre {
@@ -134,29 +152,39 @@ nav ul li a {
     justify-content: space-between;
     padding-top: 1rem;
     gap: 1rem;
+
+    i {
+        color: var(--cor-destaque);
+    }
 }
 
-.icone {
+/*.icone {
     width: 1.5rem;
     align-self: center;
     filter: invert(100%);
-}
+}*/
 
 .sobre-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    background-color: var(--cor-fundo3);
+    border-radius: 10px;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;;
+    margin-bottom: 5vh;
     color: var(--cor-destaque);
     display: flex;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
 }
 
 .sobre-mim-textos {
-    background-color: var(--cor-fundo3);
     justify-content: center;
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3vh;
-    padding: 2rem;
-    border-radius: 10px;
     text-align: center;
 }
 
@@ -172,6 +200,7 @@ p .sobre-mim-desc {
 .educacao {
     background-color: var(--cor-fundo3);
     width: 70%;
+    max-width: 900px;
     margin: auto;
     border-radius: 5px;
     margin-bottom: 5vh;
@@ -225,10 +254,13 @@ p .sobre-mim-desc {
 .skills {
     background-color: var(--cor-fundo3);
     width: 70%;
+    max-width: 900px;
     border-radius: 5px;
     text-align: center;
     margin: auto;
-    margin-top: 3vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-bottom: 3vh;
     
     h2 {
         padding-top: 2vh;
@@ -239,7 +271,7 @@ p .sobre-mim-desc {
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 10px;
+        padding: 10px 40px 10px 40px;
 
         .info {
             display: flex;
@@ -271,12 +303,54 @@ p .sobre-mim-desc {
     }
 }
 
+.projetos-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    width: 75%;
+    max-width: 900px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo3);
+    padding: 30px;
+    margin-top: 5vh;
+    border-radius: 5px;
+
+    .projeto {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 2rem;
+        color: var(--cor-destaque);
+        background-color: var(--cor-fundo4);
+        border-radius: 5px;
+        box-shadow: 0 0 5px var(--cor-destaque);
+        transition: 0.5s ease-in-out;
+    }
+
+    .projeto:hover {
+        box-shadow: 0 0 5px var(--cor-destaque),
+                    0 0 10px var(--cor-destaque),
+                    0 0 15px var(--cor-destaque);
+    }
+
+    .foto {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+}
+
 
 footer {
     display: flex;
     flex-direction: row;
     margin-top: 3vh;
     margin-left: 3vw;
+    padding-bottom: 1vh;
     height: auto;
     color: #FA278C;
     justify-content: space-between;
@@ -291,35 +365,74 @@ footer p {
     display: flex;
     margin-right: 3vw;
     justify-content: space-between;
-    gap: 1vw;
+    gap: 1.5vw;
 }
 
 .link-footer {
+    display: flex;
     text-decoration: none;
-}
 
-.icon-footer {
-    width: 1.5rem;
+    i {
+        color: var(--cor-destaque);
+        font-size: 1.5rem;
+    }
 }
 
 /*Telas pequenas*/
-@media (min-width: 426px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .hero-section {
+        width: 85%;
+        margin: auto;
+    }
     .hero-ilustracao-container {
-        background-image: url(mobile.jpg);
+        width: 100%;
+        max-width: 100%;
+        background-image: url(mobile.jpg); /*Fazer outra img tamanho 653px largura por 517px altura*/
+        background-size: cover;
     }
     .profissao-digitada {
         font-size: 2rem;
     }
-}
 
-/*Telas muito pequenas*/
-@media (min-width: 320px) and (max-width: 425px) {
-    .hero-ilustracao-container {
-        width: 90%;
-        background-image: url(mobile-p.jpg);
+    .contato {
+        min-width: 4rem;
+        padding: 0.6rem;
     }
 
-    .profissao-digitada {
-        font-size: 1.8rem;
+    .sobre-container {
+        width: 85%;
+        max-width: 100%;
+    }
+
+    .educacao {
+        width: 85%;
+        max-width: 100%;
+    }
+
+    .skills {
+        width: 85%;
+        max-width: 100%;
+    }
+}
+
+/*Telas maiores*/
+@media screen and (min-width: 768px) {
+    .skills .skill-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projetos-container .projeto {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .projetos-container .projeto-info {
+        max-width: 70%;
+    }
+
+    .projetos-container .foto {
+        aspect-ratio: 1/1;
+        max-width: 30%;
+        max-height: 200px;
     }
 }
